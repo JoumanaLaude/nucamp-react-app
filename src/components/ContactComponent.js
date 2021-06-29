@@ -46,9 +46,9 @@ class Contact extends Component {
 
         if (this.state.touched.lastName) {
             if (lastName.length < 2) {
-                errors.lastName = 'First name must be at least 2 characters.';
+                errors.lastName = 'Last name must be at least 2 characters.';
             } else if (lastName.length > 15) {
-                errors.lastName = 'First name must be 15 or less characters.';
+                errors.lastName = 'Last name must be 15 or less characters.';
             }
         }
 
