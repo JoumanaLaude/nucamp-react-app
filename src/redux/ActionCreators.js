@@ -92,3 +92,18 @@ export const addPartners = partners => ({
     type: ActionTypes.ADD_PARTNERS,
     payload: partners
 });
+
+export const postFeedback = feedback => () => {
+    return fetch(baseUrl + 'feedback', {
+        method: "POST",
+        body: JSON.stringify(feedback)
+    })
+        .then(response => {
+            if (response.ok) {
+                alert('Thank you for your feedback!' + JSON.stringify(feedback));
+                return response;
+            }
+        })
+        .then(response => response.json())
+
+};
